@@ -354,34 +354,37 @@ earthscape-climate-agency/
 
 ---
 
+```md
 # 📸 Screenshots
 
 ### Landing Page
-![Landing Page](screenshots/01_landing_page.png)
+[![Landing Page](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/01_landing_page.png)](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/01_landing_page.png)
 
 ### Login Page
-![Login Page](screenshots/02_login_page.png)
+[![Login Page](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/02_login_page.png)](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/02_login_page.png)
 
 ### Dashboard Overview
-![Dashboard](screenshots/03_dashboard_view.png)
+[![Dashboard](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/03_dashboard_view.png)](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/03_dashboard_view.png)
 
 ### HDFS Cluster View
-![HDFS](screenshots/04_hadoop_hdfs_view.png)
+[![HDFS](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/04_hadoop_hdfs_view.png)](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/04_hadoop_hdfs_view.png)
 
 ### Predictive ML Studio
-![ML Studio](screenshots/05_predictive_ml_studio.png)
+[![ML Studio](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/05_predictive_ml_studio.png)](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/05_predictive_ml_studio.png)
 
 ### Ingestion Portal
-![Ingestion Portal](screenshots/06_ingestion_portal.png)
+[![Ingestion Portal](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/06_ingestion_portal.png)](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/06_ingestion_portal.png)
 
 ### IoT Sensor Stream
-![IoT Sensor Stream](screenshots/07_iot_sensor_stream.png)
+[![IoT Sensor Stream](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/07_iot_sensor_stream.png)](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/07_iot_sensor_stream.png)
 
 ### Support & FAQ
-![Support & FAQ](screenshots/08_support_and_faq.png)
+[![Support & FAQ](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/08_support_and_faq.png)](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/08_support_and_faq.png)
 
 ### Documentation Hub
-![Documentation Hub](screenshots/09_documentation_hub.png)
+[![Documentation Hub](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/09_documentation_hub.png)](https://raw.githubusercontent.com/daniyal0815/earthscape-climate-agency/main/screenshots/09_documentation_hub.png)
+```
+
 ---
 
 #  Academic Submission Deliverables
