@@ -1,167 +1,438 @@
-# Academic eProject Report: EarthScape Climate Agency
+# 🌍 EarthScape Climate Agency
 
-* **Institution**: Aptech Computer Education (Semester 6 - Sem-6)
-* **Project Start Date**: 09-May-2026
-* **Project End Date**: 08-Jun-2026
-* **Submission Date**: 21-May-2026
+![React](https://img.shields.io/badge/React-19-blue)
+![Vite](https://img.shields.io/badge/Vite-Latest-purple)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.x-cyan)
+![License](https://img.shields.io/badge/License-Academic-green)
 
-### 👥 Project Group Members (Group 1)
-1. **MUHAMMAD OWAIS KHAN** (Student ID: Student1483137)
-2. **MUHAMMAD OWAIS KHAN** (Student ID: Student1484254)
-3. **MUHAMMAD SHEHARYAR** (Student ID: Student1485732)
-4. **MUHAMMAD UMAR** (Student ID: Student1484275)
-5. **MUHAMMAD ROHAN ZAFAR** (Student ID: Student1486748)
+**Semester End eProject (Sem-6)**
+**Aptech Computer Education**
 
 ---
 
-## 1. Problem Definition & Background
+# 📌 Project Information
 
-### Context
-Climate change is a global challenge demanding comprehensive analysis and proactive measures to mitigate its impacts. The increase in greenhouse gas emissions, deforestation, and changes in land occupancy have triggered unprecedented shifts in climate behaviors, resulting in severe weather outbreaks. 
+**Project Title:** EarthScape Climate Agency
 
-To address this complex issue, the integration of big data technologies, particularly Hadoop, becomes crucial for processing, analyzing, and interpreting the vast amount of climate-related data available.
+**Project Type:** Big Data Analytics Dashboard (Hadoop & Climate Intelligence Simulator)
 
-### Objectives
-The objective of this project is to build an interactive, distributed Big Data analytics dashboard for **EarthScape Climate Agency**. The system processes vast amounts of climate-related data from satellites, weather stations, and environmental IoT sensors to gain actionable insights for informed decision-making.
+### 📅 Project Duration
 
-### Key Functional Implementations:
-1. **User Authentication & Authorization**: Secure entry gates for `Admin` and `Analyst` roles with defined access control lists.
-2. **Data Ingestion Portal**: Multi-format schema parsing (GeoTIFF, CSV, JSON) and replication mapping to HDFS blocks.
-3. **Distributed HDFS Core Cluster Map**: Active visual mapping of NameNodes, ResourceManagers, and DataNodes with RAM/CPU load gauges.
-4. **MapReduce Parallel Execution Engine**: Animated stages (Split, Map, Shuffle, Reduce) tracing climate correlation and imputer tasks with live console logging.
-5. **Predictive ML Studio**: Hyperparameter tuner, convergence curve plotter, and LSTM projections forecasting temperatures up to the year 2050.
-6. **Real-time IoT Telemetry Stream**: scrolling data points feed with adjustable warning gates triggering automated alarms.
-7. **Support & Feedback Desk**: Ticket submission logging with eProjects email support responder simulation.
+* **Start Date:** 05-Jun-2026
+* **End Date:** 05-Jul-2026
+
+### 🚀 Live Demo
+
+🔗 https://earthscape-climate-agency.vercel.app/
 
 ---
 
-## 2. System Design Specifications
+# 👨‍💻 Project Team
 
-### System Architecture
-The application features a decoupled, premium micro-services simulated architecture designed for fast rendering, high fidelity, and responsive interactions.
-
-```
-       +-------------------------------------------------------------+
-       |                  React-Vite Client Portal                   |
-       +-------------------------------------------------------------+
-              |                                            |
-              v                                            v
-+-----------------------------+             +-----------------------------+
-|    Hadoop HDFS Simulator    |             |    Predictive ML Engine     |
-|  - NameNode Block Allocator |             |  - LSTM weights fitter      |
-|  - DataNodes Rack placement |             |  - Loss curve generator     |
-|  - MapReduce Thread logs    |             |  - Scenario projection maps |
-+-----------------------------+             +-----------------------------+
-              |                                            |
-              +---------------------+----------------------+
-                                    |
-                                    v
-                     +-----------------------------+
-                     |   MongoDB Metadata Catalog  |
-                     |  - Geospatial index spheres |
-                     |  - Active support ticket    |
-                     +-----------------------------+
-```
-
-### Data Flow Diagrams (DFDs)
-
-#### DFD Level 0: Context Diagram
-```
-  [Satellites/Sensors] ---( Raw climate feeds )---> ( ECA CORE SYSTEM )
-  [Analysts / Staff]   <---( Dashboards & Alerts )-- ( ECA CORE SYSTEM )
-  [Students/Submitters] ---( Support & Tickets )---> ( ECA CORE SYSTEM )
-```
-
-#### DFD Level 1: Functional Decomposition
-* **1.0 Ingestion Portal**: Validates file formats, parses columns, and routes to HDFS block builder.
-* **2.0 HDFS Cluster**: segments streams into 128MB block chunks and spreads three-way replicas across active DataNodes.
-* **3.0 MapReduce Job Runner**: ResourceManager coordinates node tasks, triggering Map steps, key-value sorting, and Reduce merges.
-* **4.0 ML Forecast & Stream Alarms**: Spawns recurrent network predictions and cross-checks IoT telemetry feeds against warning limits.
-* **5.0 Support Desk**: Stores student reports in catalog logs and routes responses.
+| Student ID     | Student Name              |
+| -------------- | ------------------------- |
+| Student1495874 | SHAIKH DANIYAL RAZA       |
+| Student1497264 | SYED HASHIR HUSSAIN NAQVI |
+| Student1495906 | ALI HAMZA                 |
+| Student1497583 | MUHAMMAD ASJAD ALI        |
+| Student1497266 | ASAD SHAKIL               |
+| Student1489540 | AMMAD AHMED ZUBERI        |
+| Student1496426 | HASSAN BIN SHAMS          |
 
 ---
 
-## 3. MapReduce Parallel Process Flowchart
+# 🏫 Institution
 
+**Aptech Computer Education Pakistan**
+**Semester 6 eProject Submission**
+**2026**
+
+---
+
+# 📖 Project Overview
+
+EarthScape Climate Agency is a modern climate intelligence platform developed to demonstrate the practical implementation of Big Data Analytics, Distributed Computing, Machine Learning Forecasting, and Environmental Monitoring Systems.
+
+The platform simulates a real-world Hadoop ecosystem capable of processing large-scale climate datasets collected from satellites, weather stations, and IoT sensors. Through an interactive dashboard, users can explore HDFS architecture, monitor distributed nodes, execute MapReduce jobs, analyze climate trends, and forecast future environmental conditions.
+
+This project was developed as part of the Aptech Semester-6 eProject to provide hands-on experience with modern data processing concepts and enterprise dashboard design.
+
+---
+
+# 🎯 Project Objectives
+
+The primary objectives of this project are:
+
+* Simulate Hadoop Distributed File System (HDFS)
+* Demonstrate MapReduce Processing Workflows
+* Visualize Climate Data Analytics
+* Forecast Future Climate Trends using Machine Learning
+* Monitor Real-Time IoT Environmental Data
+* Provide Secure Authentication and Authorization
+* Deliver an Enterprise-Level Dashboard Experience
+
+---
+
+# ✨ Features
+
+## 🔐 Authentication & Authorization
+
+* Secure Login System
+* Role-Based Access Control
+* Admin Dashboard
+* Analyst Dashboard
+* Protected Routes
+
+## 📥 Data Ingestion Portal
+
+* CSV Upload Support
+* JSON Upload Support
+* GeoTIFF Simulation
+* HDFS Block Mapping Visualization
+* Data Validation System
+
+## 🗄️ HDFS Cluster Simulator
+
+* NameNode Visualization
+* DataNode Monitoring
+* ResourceManager Simulation
+* Rack Awareness Simulation
+* Replication Factor Mapping
+* CPU Usage Monitoring
+* RAM Usage Monitoring
+
+## ⚡ MapReduce Engine
+
+* Split Phase Visualization
+* Mapping Stage Simulation
+* Shuffle & Sort Stage
+* Reduce Stage Processing
+* Live Processing Logs
+* Job Execution Tracking
+
+## 🤖 Predictive ML Studio
+
+* Climate Forecast Dashboard
+* LSTM Prediction Simulation
+* Hyperparameter Tuning Interface
+* Temperature Forecasting Until 2050
+* Convergence Curve Analysis
+* Model Performance Graphs
+
+## 📡 IoT Telemetry Stream
+
+* Real-Time Sensor Data Feed
+* Alert Threshold Controls
+* Automated Warning Notifications
+* Environmental Monitoring Dashboard
+* Sensor Health Tracking
+
+## 🎫 Support & Feedback Desk
+
+* Ticket Submission System
+* Feedback Management
+* Query Logging
+* Support Response Simulation
+
+---
+
+# 🏗️ System Architecture
+
+```text
+React-Vite Client Portal
+│
+├── Authentication Module
+│
+├── Hadoop HDFS Simulator
+│   ├── NameNode Manager
+│   ├── DataNode Cluster
+│   └── Replication Engine
+│
+├── MapReduce Processing Engine
+│   ├── Split Phase
+│   ├── Map Phase
+│   ├── Shuffle & Sort
+│   └── Reduce Phase
+│
+├── Machine Learning Studio
+│   ├── Forecast Engine
+│   ├── LSTM Simulator
+│   └── Analytics Dashboard
+│
+├── IoT Monitoring Module
+│
+└── Support & Feedback System
 ```
-       +------------------------+
-       |   Read HDFS Dataset    |
-       +------------------------+
-                   |
-                   v
-       +------------------------+
-       |   Input Data Splitting | (128MB sectors partitioned)
-       +------------------------+
-                   |
-                   v
-       +------------------------+
-       |    Parallel Mapping    | (DataNodes execute Map class threads)
-       +------------------------+
-                   |
-                   v
-       +------------------------+
-       |     Shuffle & Sort     | (Consolidate duplicate spatial keys)
-       +------------------------+
-                   |
-                   v
-       +------------------------+
-       |    Reduce Aggregates   | (Merge buffers to final value calculations)
-       +------------------------+
-                   |
-                   v
-       +------------------------+
-       | Write output to HDFS   | (Save compiled part-r files)
-       +------------------------+
+
+---
+
+# 📊 Core Modules
+
+### 1. Authentication Module
+
+Handles user login, role management, and secure access control.
+
+### 2. Data Ingestion Portal
+
+Accepts climate datasets and prepares them for HDFS storage simulation.
+
+### 3. HDFS Simulator
+
+Represents Hadoop's distributed storage architecture with replication and node monitoring.
+
+### 4. MapReduce Engine
+
+Simulates distributed data processing through Split, Map, Shuffle, Sort, and Reduce stages.
+
+### 5. Machine Learning Studio
+
+Provides climate forecasting visualizations and predictive analysis.
+
+### 6. IoT Monitoring System
+
+Displays real-time environmental sensor streams and automated alert systems.
+
+### 7. Support Desk
+
+Allows users to submit support requests and feedback tickets.
+
+---
+
+# 🛠️ Technology Stack
+
+## Frontend
+
+* React.js
+* Vite
+* JavaScript (ES6+)
+* Tailwind CSS
+* Framer Motion
+* React Router DOM
+
+## Big Data Concepts
+
+* Apache Hadoop (Simulation)
+* HDFS Architecture
+* MapReduce Workflow
+* Distributed Computing Concepts
+* Data Replication Concepts
+
+## Database
+
+* MongoDB
+
+## Machine Learning Concepts
+
+* LSTM Forecasting
+* Predictive Analytics
+* Climate Trend Analysis
+
+## Development Tools
+
+* Visual Studio Code
+* Git
+* GitHub
+
+## Deployment
+
+* Vercel
+
+---
+
+# 💻 Hardware Requirements
+
+* Intel Core i5 Processor or Higher
+* Minimum 8 GB RAM
+* Recommended 16 GB RAM
+* 500 GB SSD Storage
+* Integrated or Dedicated Graphics
+* Internet Connection
+
+---
+
+# ⚙️ Software Requirements
+
+* Windows 10 / Windows 11 / Linux
+* Node.js v18+
+* npm
+* Visual Studio Code
+* Git
+* MongoDB (Optional)
+* Modern Web Browser
+
+---
+
+
+And update the Installation Guide to:
+
+````md
+# 🚀 Installation Guide
+
+### Clone Repository
+
+```bash
+git clone https://github.com/daniyal0815/earthscape-climate-agency.git
+```
+
+### Navigate to Project Directory
+
+```bash
+cd earthscape-climate-agency
+```
+
+### Install Dependencies
+
+```bash
+npm install --legacy-peer-deps
+```
+
+### Start Development Server
+
+```bash
+npm run dev
+```
+
+### Build Production Version
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+### Open Application
+
+```text
+http://localhost:5173
 ```
 
 ---
 
-## 4. Hardware & Software Specifications
+# 📂 Project Structure
 
-### Hardware Requirements
-* **Processor (CPU)**: Intel Core i5 with 4 Cores (Intel i7 Core recommended for VM node simulations).
-* **System Memory (RAM)**: 16 GB DDR4.
-* **Storage**: 500 GB Solid-State Drive (SSD).
-* **Graphics**: Integrated standard HD Graphics or Dedicated GPU.
-* **Operating System**: Windows 10/11 64-Bit or Linux.
-
-### Software Architecture stack
-* **Big Data Framework**: Apache Hadoop 3.x with HDFS enabled.
-* **Database Catalog**: MongoDB Compass & MongoDB Shell (for caching & support ticket stores).
-* **Analytical Queries**: Apache Impala Server.
-* **Machine Learning Studio**: Jupyter Anaconda Notebook 3, RStudio.
-* **Tableau Integrations**: Tableau Desktop / Tableau Public.
-* **IDE Tools**: Visual Studio Code / PyCharm.
-
----
-
-## 5. Project Assumptions Made
-
-1. **Simulated Sandbox Delivery**: Since setting up virtualized multi-node Hadoop clusters and Impala databases consumes intensive RAM (~32GB+) and is difficult to deploy across student machines, we have delivered a **highly advanced, high-fidelity single-page simulated platform**. This portal implements 100% of the functional and visual operations of a live cluster, making it instantly reviewable and deployable on any standard PC.
-2. **Access Security**: Credentials for testing are preconfigured. Analysts have access to visualization, MapReduce execution, and ML forecasts, whereas Administrators also gain authority to override IoT streaming gates.
-3. **Data Replication**: HDFS storage simulates default replication factor `3` with rack-aware block positioning policies.
+```text
+earthscape-climate-agency/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── layouts/
+│   ├── hooks/
+│   ├── services/
+│   ├── utils/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── package.json
+├── vite.config.js
+└── README.md
+```
 
 ---
 
-## 6. Installation & Verification Instructions
+# 📚 Educational Concepts Demonstrated
 
-Follow these commands to deploy the project locally:
+* Hadoop Distributed File System (HDFS)
+* Distributed Storage Systems
+* Data Replication Techniques
+* MapReduce Processing
+* Big Data Analytics
+* Climate Intelligence Systems
+* Environmental Monitoring
+* IoT Data Streaming
+* Machine Learning Forecasting
+* Dashboard Visualization
+* Authentication & Authorization
+* Enterprise UI/UX Design
 
-1. **Verify Node JS**: Ensure Node.js (v18+) is installed on your system.
-2. **Navigate to Repository**:
-   ```bash
-   cd C:\earthscape-climate-agency
-   ```
-3. **Install Client Dependencies**:
-   ```bash
-   npm install --legacy-peer-deps
-   ```
-4. **Initiate Local Dev Server**:
-   ```bash
-   npm run dev
-   ```
-5. **Open Browser Preview**: Open http://localhost:5173 to review the beautiful running dashboard!
-6. **Compile Static Package**:
-   ```bash
-   npm run build
-   ```
+---
+
+# 📸 Screenshots
+
+Add screenshots of the following modules:
+
+### Landing Page
+
+![Landing Page](screenshots/01_landing_page.png)
+
+### Login Page
+
+![Login Page](screenshots/02_login_page.png)
+
+### Dashboard Overview
+
+![Dashboard](screenshots/03_dashboard_view.png)
+
+### HDFS Cluster View
+
+![HDFS](screenshots/04_hadoop_hdfs_view.png)
+
+### Predictive ML Studio
+
+![ML Studio](screenshots/05_predictive_ml_studio.png)
+
+### Ingestion Portal
+
+![Ingestion Portal](screenshots/06_ingestion_portal.png)
+
+### IoT Sensor Stream
+
+![IoT Sensor Stream](screenshots/07_iot_sensor_stream.png)
+
+### Support & FAQ
+
+![Support & FAQ](screenshots/08_support_and_faq.png)
+
+### Documentation Hub
+
+![Documentation Hub](screenshots/09_documentation_hub.png)
+---
+
+#  Academic Submission Deliverables
+
+* Working Application
+* Source Code
+* Compiled Build
+* eProject Report
+* DFD Diagrams
+* Flowcharts
+* Process Diagrams
+* Database Design
+* User Guide
+* Developer Guide
+* Project Demonstration Video
+
+---
+
+#  Contributors
+
+* Shaikh Daniyal Raza
+* Syed Hashir Hussain Naqvi
+* Ali Hamza
+* Muhammad Asjad Ali
+* Asad Shakil
+* Ammad Ahmed Zuberi
+* Hassan Bin Shams
+
+---
+
+#  Acknowledgement
+
+We would like to express our sincere gratitude to Aptech Computer Education, our instructors, mentors, and fellow team members for their valuable guidance and support throughout the development of this project.
+
+This eProject provided practical exposure to Big Data concepts, distributed computing architectures, machine learning forecasting techniques, and modern web application development. The experience gained through this project has significantly enhanced our technical knowledge, teamwork, and problem-solving skills.
+
+---
+
+# 📜 License
+
+This project was developed by the EarthScape Climate Agency Team for academic purposes as part of the Aptech Computer Education Semester-6 eProject.
+
+© 2026 EarthScape Climate Agency Team. All Rights Reserved.
