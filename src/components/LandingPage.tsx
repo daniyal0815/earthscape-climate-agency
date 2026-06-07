@@ -494,7 +494,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnterPortal, isLogge
               <span style={{ fontWeight: 600, color: 'var(--text-secondary)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Aptech eProject</span>
               <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Course: Big Data Systems</span>
               <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Batch Code: 2307C1</span>
-              <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Faculty: Urooh Rehman</span>
+              <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Faculty: Urooj Rehman</span>
               <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Status: Production Verified</span>
             </div>
           </div>
