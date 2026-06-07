@@ -23,13 +23,13 @@ export const Login: React.FC<LoginProps> = ({ onLogin, onBack }) => {
     setTimeout(() => {
       if (email.trim() === 'admin@earthscape.org' && password === 'admin') {
         onLogin({
-          name: 'Sarah Connor (Admin)',
+          name: 'Daniyal Raza (Admin)',
           email: 'admin@earthscape.org',
           role: 'Admin',
         });
       } else if (email.trim() === 'analyst@earthscape.org' && password === 'analyst') {
         onLogin({
-          name: 'James Carter (Analyst)',
+          name: 'Asad Shakeel (Analyst)',
           email: 'analyst@earthscape.org',
           role: 'Analyst',
         });
@@ -144,7 +144,7 @@ export const Login: React.FC<LoginProps> = ({ onLogin, onBack }) => {
               className="btn btn-secondary" 
               style={{ fontSize: '0.8rem', padding: '8px 12px', justifyContent: 'center' }}
             >
-              <Shield size={12} color="var(--primary)" /> Sarah (Admin)
+              <Shield size={12} color="var(--primary)" /> Daniyal Raza (Admin)
             </button>
             <button 
               type="button" 
@@ -152,7 +152,7 @@ export const Login: React.FC<LoginProps> = ({ onLogin, onBack }) => {
               className="btn btn-secondary" 
               style={{ fontSize: '0.8rem', padding: '8px 12px', justifyContent: 'center' }}
             >
-              <Shield size={12} color="var(--accent)" /> James (Analyst)
+              <Shield size={12} color="var(--accent)" /> Asad Shakeel (Analyst)
             </button>
           </div>
         </div>
