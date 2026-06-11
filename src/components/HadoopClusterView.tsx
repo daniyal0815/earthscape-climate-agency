@@ -1,9 +1,14 @@
 // HadoopClusterView.tsx
 import React, { useState, useEffect, useRef } from 'react';
 import { HADOOP_NODES, MAPREDUCE_JOBS } from '../mockData';
-import { Server, Database, Play, AlertCircle, Terminal, Cpu, HardDrive, RefreshCw } from 'lucide-react';
+import { Server, Database, Play, AlertCircle, Terminal, Cpu, HardDrive, RefreshCw, Lock } from 'lucide-react';
+import type { UserRole } from '../utils/permissions';
 
-export const HadoopClusterView: React.FC = () => {
+interface HadoopClusterViewProps {
+  userRole: UserRole;
+}
+
+export const HadoopClusterView: React.FC<HadoopClusterViewProps> = ({ userRole }) => {
   const [nodes, setNodes] = useState(HADOOP_NODES);
   const [selectedJobId, setSelectedJobId] = useState('MR-001');
   const [isExecuting, setIsExecuting] = useState(false);
@@ -49,7 +54,7 @@ export const HadoopClusterView: React.FC = () => {
   }, []);
 
   const triggerMapReduce = () => {
-    if (isExecuting) return;
+    if (userRole !== 'Admin' || isExecuting) return;
     
     setIsExecuting(true);
     setExecutionProgress(0);
@@ -157,6 +162,9 @@ export const HadoopClusterView: React.FC = () => {
         </h1>
         <p style={{ color: 'var(--text-secondary)', marginTop: '4px' }}>
           Real-time observation panel of our distributed Hadoop climate storage lake and MapReduce parallel processor threads.
+          <span style={{ display: 'block', marginTop: '6px', fontSize: '0.8rem', color: 'var(--primary)' }}>
+            Admin-only infrastructure module — cluster orchestration and MapReduce job execution.
+          </span>
         </p>
       </div>
 
@@ -359,12 +367,17 @@ export const HadoopClusterView: React.FC = () => {
 
           <button 
             onClick={triggerMapReduce} 
-            disabled={isExecuting} 
+            disabled={isExecuting || userRole !== 'Admin'} 
             className="btn btn-primary"
             style={{ width: '100%', justifyContent: 'center', height: '45px', marginTop: 'auto' }}
           >
             <Play size={16} fill="currentColor" /> {isExecuting ? 'Parallel Threads Executing...' : 'Execute Parallel Job'}
           </button>
+          {userRole !== 'Admin' && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.8rem', color: 'var(--warning)', marginTop: '8px' }}>
+              <Lock size={14} /> MapReduce execution restricted to Administrators.
+            </div>
+          )}
         </div>
 
         {/* Animated Terminal / Progress Output */}

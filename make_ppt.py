@@ -133,11 +133,13 @@ def main():
     p_t.space_after = Pt(14)
 
     team_members = [
-        ("MUHAMMAD OWAIS KHAN", "Student1483137"),
-        ("MUHAMMAD OWAIS KHAN", "Student1484254"),
-        ("MUHAMMAD SHEHARYAR", "Student1485732"),
-        ("MUHAMMAD UMAR", "Student1484275"),
-        ("MUHAMMAD ROHAN ZAFAR", "Student1486748"),
+        ("SHAIKH DANIYAL RAZA", "Student1495874"),
+("SYED HASHIR HUSSAIN NAQVI", "Student1497264"),
+("ALI HAMZA .", "Student1495906"),
+("MUHAMMAD ASJAD ALI", "Student1497583"),
+("ASAD SHAKIL .", "Student1497266"),
+("AMMAD AHMED ZUBERI", "Student1489540"),
+("HASSAN BIN SHAMS .", "Student1496426"),
     ]
 
     for name, roll in team_members:
@@ -163,8 +165,8 @@ def main():
     p_tl.space_after = Pt(14)
 
     milestones = [
-        "Start Date: 09-May-2026",
-        "End Date: 08-Jun-2026",
+        "Start Date: 05-Jun-2026",
+        "End Date:05-Jul-2026",
         "Required Deliverables: Source Code, Compiled Code, DFDs, Flowcharts, and eProject Report.",
         "Core Analytics: Dashboard with dynamic Pearson-r engine.",
         "Cluster View: Hadoop HDFS DataNodes and MapReduce scheduler simulation.",

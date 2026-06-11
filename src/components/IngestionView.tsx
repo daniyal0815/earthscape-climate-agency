@@ -1,6 +1,7 @@
 // IngestionView.tsx
 import React, { useState, useRef, useEffect } from 'react';
 import { Upload, Database, FileSpreadsheet, Image, Activity, CheckCircle2 } from 'lucide-react';
+import type { UserRole } from '../utils/permissions';
 
 interface IngestionStep {
   label: string;
@@ -8,7 +9,7 @@ interface IngestionStep {
   details?: string;
 }
 
-export const IngestionView: React.FC = () => {
+export const IngestionView: React.FC<{ userRole: UserRole }> = ({ userRole }) => {
   const [dragActive, setDragActive] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [recordsCount, setRecordsCount] = useState(0);
@@ -50,6 +51,7 @@ export const IngestionView: React.FC = () => {
   };
 
   const startPipeline = (type: 'csv' | 'tiff' | 'json') => {
+    if (userRole !== 'Admin') return;
     clearPipelineTimers();
     setIsProcessing(true);
     setShowCompleteAlert(false);
@@ -179,6 +181,9 @@ export const IngestionView: React.FC = () => {
         </h1>
         <p style={{ color: 'var(--text-secondary)', marginTop: '4px' }}>
           Simulated high-performance gateway ingestion. Stream satellite raster bands, station CSVs, and IoT logs into HDFS.
+          <span style={{ display: 'block', marginTop: '6px', fontSize: '0.8rem', color: 'var(--primary)' }}>
+            Admin-only data pipeline — authorized personnel may ingest and replicate climate datasets into HDFS.
+          </span>
         </p>
       </div>
 

@@ -92,28 +92,42 @@ export const DocsView: React.FC = () => {
             <div style={{ color: 'var(--primary)', fontWeight: 'bold', borderBottom: '1px solid var(--border-color)', paddingBottom: '4px' }}>PROJECT TEAM (Sem-6)</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
               <div>
-                <strong style={{ color: '#ffffff' }}>M. OWAIS KHAN</strong>
-                <div style={{ color: 'var(--text-secondary)' }}>Student1483137</div>
-              </div>
-              <div>
-                <strong style={{ color: '#ffffff' }}>M. OWAIS KHAN</strong>
-                <div style={{ color: 'var(--text-secondary)' }}>Student1484254</div>
-              </div>
-              <div>
-                <strong style={{ color: '#ffffff' }}>M. SHEHARYAR</strong>
-                <div style={{ color: 'var(--text-secondary)' }}>Student1485732</div>
-              </div>
-              <div>
-                <strong style={{ color: '#ffffff' }}>M. UMAR</strong>
-                <div style={{ color: 'var(--text-secondary)' }}>Student1484275</div>
-              </div>
-              <div>
-                <strong style={{ color: '#ffffff' }}>M. ROHAN ZAFAR</strong>
-                <div style={{ color: 'var(--text-secondary)' }}>Student1486748</div>
-              </div>
+  <strong style={{ color: '#ffffff' }}>SHAIKH DANIYAL RAZA</strong>
+  <div style={{ color: 'var(--text-secondary)' }}>Student1495874</div>
+</div>
+
+<div>
+  <strong style={{ color: '#ffffff' }}>SYED HASHIR HUSSAIN NAQVI</strong>
+  <div style={{ color: 'var(--text-secondary)' }}>Student1497264</div>
+</div>
+
+<div>
+  <strong style={{ color: '#ffffff' }}>ALI HAMZA</strong>
+  <div style={{ color: 'var(--text-secondary)' }}>Student1495906</div>
+</div>
+
+<div>
+  <strong style={{ color: '#ffffff' }}>MUHAMMAD ASJAD ALI</strong>
+  <div style={{ color: 'var(--text-secondary)' }}>Student1497583</div>
+</div>
+
+<div>
+  <strong style={{ color: '#ffffff' }}>ASAD SHAKIL</strong>
+  <div style={{ color: 'var(--text-secondary)' }}>Student1497266</div>
+</div>
+
+<div>
+  <strong style={{ color: '#ffffff' }}>AMMAD AHMED ZUBERI</strong>
+  <div style={{ color: 'var(--text-secondary)' }}>Student1489540</div>
+</div>
+
+<div>
+  <strong style={{ color: '#ffffff' }}>HASSAN BIN SHAMS</strong>
+  <div style={{ color: 'var(--text-secondary)' }}>Student1496426</div>
+</div>
             </div>
             <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '6px', color: 'var(--accent)', fontSize: '0.7rem' }}>
-              Timeline: 09-May to 08-Jun
+              Timeline: 05-Jun to 05-Jul
             </div>
           </div>
         </div>

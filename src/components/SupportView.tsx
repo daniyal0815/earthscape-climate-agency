@@ -2,9 +2,14 @@
 import React, { useState } from 'react';
 import { DEFAULT_TICKETS, FAQS } from '../mockData';
 import type { SupportTicket } from '../mockData';
-import { MessageSquare, Send, CheckCircle2, ChevronDown, ChevronUp, User, Clock } from 'lucide-react';
+import { MessageSquare, Send, CheckCircle2, ChevronDown, ChevronUp, User, Clock, ShieldCheck } from 'lucide-react';
+import type { UserRole } from '../utils/permissions';
 
-export const SupportView: React.FC = () => {
+interface SupportViewProps {
+  userRole: UserRole;
+}
+
+export const SupportView: React.FC<SupportViewProps> = ({ userRole }) => {
   const [tickets, setTickets] = useState<SupportTicket[]>(DEFAULT_TICKETS);
   const [expandedFaqIdx, setExpandedFaqIdx] = useState<number | null>(null);
   const [selectedTicketId, setSelectedTicketId] = useState<string | null>(null);
@@ -49,6 +54,23 @@ export const SupportView: React.FC = () => {
 
   const selectedTicket = tickets.find(t => t.id === selectedTicketId);
 
+  const handleResolveTicket = () => {
+    if (userRole !== 'Admin' || !selectedTicketId) return;
+    setTickets((prev) =>
+      prev.map((t) =>
+        t.id === selectedTicketId
+          ? {
+              ...t,
+              status: 'Resolved' as const,
+              teamResponse:
+                t.teamResponse ??
+                'Your inquiry has been reviewed and resolved by the EarthScape administrative team. Please contact support if further assistance is required.',
+            }
+          : t
+      )
+    );
+  };
+
   return (
     <div className="fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
       
@@ -58,7 +80,16 @@ export const SupportView: React.FC = () => {
           <MessageSquare color="var(--primary)" /> eProjects Support Desk & FAQ
         </h1>
         <p style={{ color: 'var(--text-secondary)', marginTop: '4px' }}>
-          Interact directly with the eProjects Team, submit technical inquiries, or review key architectural FAQs.
+          Submit academic inquiries, browse FAQs, and track support ticket resolution status.
+          {userRole === 'Admin' ? (
+            <span style={{ display: 'block', marginTop: '6px', fontSize: '0.8rem', color: 'var(--primary)' }}>
+              Admin desk — you can review open tickets and mark them as resolved.
+            </span>
+          ) : (
+            <span style={{ display: 'block', marginTop: '6px', fontSize: '0.8rem', color: 'var(--accent)' }}>
+              Analyst access — submit inquiries and view responses. Ticket resolution is handled by Administrators.
+            </span>
+          )}
         </p>
       </div>
 
@@ -329,6 +360,17 @@ export const SupportView: React.FC = () => {
                     <Clock size={14} />
                     <span>Inquiry queued. An administrative assistant is preparing a diagnostic resolution.</span>
                   </div>
+                )}
+
+                {userRole === 'Admin' && selectedTicket.status === 'Open' && (
+                  <button
+                    type="button"
+                    onClick={handleResolveTicket}
+                    className="btn btn-primary"
+                    style={{ justifyContent: 'center', marginTop: '4px' }}
+                  >
+                    <ShieldCheck size={16} /> Mark Ticket as Resolved
+                  </button>
                 )}
               </div>
             )}

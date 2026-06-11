@@ -7,8 +7,13 @@ import {
 } from 'recharts';
 import { Filter, Thermometer, Flame, Leaf, Wind, RefreshCw, BarChart2 } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
+import type { UserRole } from '../utils/permissions';
 
-export const DashboardView: React.FC = () => {
+interface DashboardViewProps {
+  userRole: UserRole;
+}
+
+export const DashboardView: React.FC<DashboardViewProps> = ({ userRole }) => {
   const { chartStyles } = useTheme();
   const [yearRange, setYearRange] = useState<[number, number]>([1980, 2025]);
   const [regionFilter, setRegionFilter] = useState('Global');
@@ -90,6 +95,11 @@ export const DashboardView: React.FC = () => {
           </h1>
           <p style={{ color: 'var(--text-secondary)', marginTop: '4px' }}>
             Interactive insights engine correlating global climate anomalies, CO2 inputs, and satellite forest monitoring.
+            {userRole === 'Analyst' && (
+              <span style={{ display: 'block', marginTop: '6px', fontSize: '0.8rem', color: 'var(--accent)' }}>
+                Analyst workspace — explore and correlate datasets. Infrastructure ingestion and cluster jobs require Admin access.
+              </span>
+            )}
           </p>
         </div>
         

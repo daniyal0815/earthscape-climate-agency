@@ -5,8 +5,9 @@ import {
   ResponsiveContainer, LineChart, Line, AreaChart, Area,
   XAxis, YAxis, CartesianGrid, Tooltip, Legend 
 } from 'recharts';
-import { Brain, Sliders, CheckCircle2, TrendingUp, Cpu } from 'lucide-react';
+import { Brain, Sliders, CheckCircle2, TrendingUp, Cpu, Rocket } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
+import type { UserRole } from '../utils/permissions';
 
 interface LossPoint {
   epoch: number;
@@ -14,7 +15,11 @@ interface LossPoint {
   valLoss: number;
 }
 
-export const MLStudioView: React.FC = () => {
+interface MLStudioViewProps {
+  userRole: UserRole;
+}
+
+export const MLStudioView: React.FC<MLStudioViewProps> = ({ userRole }) => {
   const { chartStyles } = useTheme();
   const [modelType, setModelType] = useState<'LSTM' | 'RandomForest' | 'LinearRegression'>('LSTM');
   const [learningRate, setLearningRate] = useState(0.01);
@@ -25,6 +30,7 @@ export const MLStudioView: React.FC = () => {
   const [isTraining, setIsTraining] = useState(false);
   const [currentEpoch, setCurrentEpoch] = useState(0);
   const [isTrained, setIsTrained] = useState(false);
+  const [isDeployed, setIsDeployed] = useState(false);
   const [lossHistory, setLossHistory] = useState<LossPoint[]>([]);
   
   const [stats, setStats] = useState({ r2: 0, mae: 0, rmse: 0 });
@@ -39,6 +45,7 @@ export const MLStudioView: React.FC = () => {
   const handleTrain = () => {
     setIsTraining(true);
     setIsTrained(false);
+    setIsDeployed(false);
     setCurrentEpoch(0);
     setLossHistory([]);
 
@@ -97,6 +104,11 @@ export const MLStudioView: React.FC = () => {
         </h1>
         <p style={{ color: 'var(--text-secondary)', marginTop: '4px' }}>
           Train neural network models (LSTM) or ensemble architectures (Random Forest) to forecast global environmental anomalies.
+          {userRole === 'Analyst' && (
+            <span style={{ display: 'block', marginTop: '6px', fontSize: '0.8rem', color: 'var(--accent)' }}>
+              Analysts may train and evaluate models. Production deployment to the live forecasting pipeline requires Admin approval.
+            </span>
+          )}
         </p>
       </div>
 
@@ -189,6 +201,18 @@ export const MLStudioView: React.FC = () => {
           >
             <Cpu size={16} /> {isTraining ? `Fitting weights... Epoch [${currentEpoch}/${epochs}]` : 'Initiate Model Training'}
           </button>
+
+          {isTrained && userRole === 'Admin' && (
+            <button
+              type="button"
+              onClick={() => setIsDeployed(true)}
+              disabled={isDeployed}
+              className="btn btn-secondary"
+              style={{ width: '100%', justifyContent: 'center', height: '42px' }}
+            >
+              <Rocket size={16} /> {isDeployed ? 'Model Deployed to Production' : 'Deploy Model to Production Pipeline'}
+            </button>
+          )}
         </div>
 
         {/* Live Training Curves */}
